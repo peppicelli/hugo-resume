@@ -1,0 +1,8 @@
+<div class="container col-md-10 col-md-offset-1 main-section">
+  <h2 class="text-uppercase">{{ .Site.Params.profile.firstName }}<strong>{{ .Site.Params.profile.lastName }}</strong></h2>
+  <div class="main-title">
+    <h1 class="text-uppercase">{{ .Site.Params.profile.tagline }}</h1>
+    <hr align="left">
+    <p>{{ with .Site.Params.profile.summary }}{{ . | markdownify }}{{ end }}</p>
+  </div>
+</div>

@@ -8,6 +8,7 @@
     <title>Bootstrap 101 Template</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/daniel_cv.css" rel="stylesheet">
 
     {{`<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,14 +19,13 @@
     <![endif]-->` | safeHTML }}
   </head>
   <body>
-    <div class="container col-md-10 col-md-offset-1 main-section">
-      <h2 class="text-uppercase">{{ .Site.Params.profile.firstName }}<strong>{{ .Site.Params.profile.lastName }}</strong></h2>
-      <div class="main-title">
-        <h1 class="text-uppercase">{{ .Site.Params.profile.tagline }}</h1>
-        <hr align="left">
-        <p>{{ with .Site.Params.profile.summary }}{{ . | markdownify }}{{ end }}</p>
-      </div>
+    {{ partial "main.html" . }}
+    <div class="section container col-md-10 col-md-offset-1">
+    {{ range where .Data.Pages "Section" "experience" }}
+       {{ partial "experience.html" . }}
+    {{ end }}
     </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

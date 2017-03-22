@@ -7,6 +7,7 @@
 .main-section h2 {
   padding-top:15px;
   font-weight: 100;
+  letter-spacing: 1px;
 }
 
 .main-section h1 {
@@ -19,12 +20,41 @@
   padding-bottom: 60px;
 }
 
-.main-title hr {
+hr {
   width: 20%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+.main-section {
   color: white;
+}
+
+.section {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+}
+
+.section:nth-child(even) {
+  color: rgb(88, 121, 140);
+}
+
+.section:nth-child(odd) {
+  background-color: rgba(81,172,205,1);
+}
+
+.section h2 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.section h3 {
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+.fa {
+  margin-right: 15px;
 }
 
 h2 {
@@ -32,10 +62,13 @@ h2 {
   letter-spacing: 1px;
 }
 
+h3 {
+  font-size: 18px;
+}
+
 p {
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 1px;
 }
 
 /* Not for tablets & phones */
