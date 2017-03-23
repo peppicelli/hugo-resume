@@ -2,10 +2,10 @@
   background: linear-gradient(to bottom, rgba(34,125,170,1) 0%, rgba(81,172,205,1) 100%);
   padding-left:25px;
   padding-right:25px;
+  padding-top:25px;
 }
 
 .main-section h2 {
-  padding-top:15px;
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -32,14 +32,24 @@ hr {
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.section-title-margin {
+  margin-left:39px;
+}
+
+.section-logo {
+  float: right;
 }
 
 .section:nth-child(even) {
-  color: rgb(88, 121, 140);
+  color: rgb(74, 104, 121);
 }
 
 .section:nth-child(odd) {
-  background-color: rgba(81,172,205,1);
+  background-color: rgb(229, 248, 255);
+  color: rgb(74, 104, 121);
 }
 
 .section h2 {
@@ -49,8 +59,12 @@ hr {
 }
 
 .section h3 {
-  margin-top: 0px;
+  margin-top: 6px;
   margin-bottom: 6px;
+}
+
+.section ul {
+  margin-left: 14px;
 }
 
 .fa {

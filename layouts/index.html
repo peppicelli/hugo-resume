@@ -20,11 +20,9 @@
   </head>
   <body>
     {{ partial "main.html" . }}
-    <div class="section container col-md-10 col-md-offset-1">
     {{ range where .Data.Pages "Section" "experience" }}
        {{ partial "experience.html" . }}
     {{ end }}
-    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>

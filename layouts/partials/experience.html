@@ -1,5 +1,7 @@
-<div class="small"> {{ .Params.start_date}} - {{ .Params.end_date }} </div>
-<h3><span class="text-uppercase">{{ .Params.company  }}</span></h3>
+<div class="section container col-md-10 col-md-offset-1">
+<img class="section-logo img-responsive img-thumbnail" src="{{ .Params.logo }}"/>
+<div class="small section-title-margin"> {{ .Params.start_date}} - {{ .Params.end_date }} </div>
+<h3 class="section-title-margin"><span class="text-uppercase">{{ .Params.company  }}</span></h3>
 <h2><i class="fa fa-briefcase" aria-hidden="true"></i>{{ .Params.title  }} </h2>
 <ul>
   {{ range .Params.responsabilities }}
@@ -12,3 +14,4 @@
      <li>{{ . | markdownify }}</li>
   {{ end }}
 </ul>
+</div>
