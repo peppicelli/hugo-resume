@@ -1,4 +1,6 @@
 +++
+project = ""
+display_project = true
 company = ""
 logo = ""
 title = ""

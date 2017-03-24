@@ -15,6 +15,11 @@
   font-weight: bold;
 }
 
+.main-section p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
 .main-title {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -41,6 +46,8 @@ hr {
 
 .section-logo {
   float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .section:nth-child(even) {
@@ -52,12 +59,6 @@ hr {
   color: rgb(74, 104, 121);
 }
 
-.section h2 {
-  margin-top: 6px;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
-
 .section h3 {
   margin-top: 6px;
   margin-bottom: 6px;
@@ -65,6 +66,10 @@ hr {
 
 .section ul {
   margin-left: 14px;
+}
+
+.section p {
+  margin-left: 40px;
 }
 
 .fa {
@@ -80,10 +85,7 @@ h3 {
   font-size: 18px;
 }
 
-p {
-  font-size: 18px;
-  line-height: 30px;
-}
+
 
 /* Not for tablets & phones */
 @media (min-width: 768px) {
