@@ -1,6 +1,7 @@
 <div class="section container col-md-10 col-md-offset-1">
 <img class="section-logo img-responsive img-thumbnail" src="{{ .Params.logo }}"/>
-<div class="small section-title-margin"> {{ .Params.start_date}} - {{ .Params.end_date }} </div>
+<div class="small section-title-margin"> {{ .Params.start_date}} {{ if ( not (eq .Params.end_date "")) }} - {{ .Params.end_date}} {{ end }} </div>
+
 <h3 class="section-title-margin"><span class="text-uppercase"><strong>{{ .Params.company  }}</strong></span></h3>
 {{ if eq .Params.display_project true }}
 <h2><i class="fa fa-desktop" aria-hidden="true"></i>Project</h2>
@@ -17,7 +18,7 @@
 {{ end }}
 
 {{ if (not (isset .Params "main_achievements")) | or (.Params.main_achievements) }}
-<h2><i class="fa fa-trophy" aria-hidden="true"></i>Three main achievements</h2>
+<h2><i class="fa fa-trophy" aria-hidden="true"></i>Interesting challenges</h2>
 <ul>
   {{ range .Params.main_achievements }}
      <li>{{ . | markdownify }}</li>

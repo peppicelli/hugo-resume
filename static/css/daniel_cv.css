@@ -20,6 +20,14 @@
   line-height: 30px;
 }
 
+.main-section strong {
+  color: rgb(29, 46, 56);
+}
+
+.main-section a {
+  color: rgb(29, 46, 56);
+}
+
 .main-title {
   padding-top: 60px;
   padding-bottom: 60px;
