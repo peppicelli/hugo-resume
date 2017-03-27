@@ -38,9 +38,12 @@
   color: rgb(37, 85, 113);
 }
 
-.main-title {
-  padding-top: 60px;
-  padding-bottom: 60px;
+
+.main-title ul {
+  list-style: none;
+  font-size: 16px;
+  padding-left: 5px;
+  line-height: 25px;
 }
 
 hr {
@@ -54,13 +57,28 @@ hr {
 .competence {
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
     color: rgb(74, 104, 121);
 }
 
 .competence p {
   margin-left: 40px;
+}
+
+.competence h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.section-title {
+  padding-left: 25px;
+  padding-right: 25px;
+  color: rgb(74, 104, 121);
+}
+
+.section-title h1 {
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .section {
@@ -119,8 +137,6 @@ h2 {
 h3 {
   font-size: 18px;
 }
-
-
 
 /* Not for tablets & phones */
 @media (min-width: 768px) {

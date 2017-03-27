@@ -21,9 +21,7 @@
   <body>
     {{ partial "main.html" . }}
     {{ partial "competence.html" . }}
-    {{ range where ((.Data.Pages.ByParam "start_date").Reverse) "Section" "experience" }}
-       {{ partial "experience.html" . }}
-    {{ end }}
+    {{ partial "experience.html" . }}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
