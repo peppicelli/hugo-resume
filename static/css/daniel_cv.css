@@ -3,6 +3,16 @@
   padding-left:25px;
   padding-right:25px;
   padding-top:25px;
+  padding-bottom:25px;
+}
+
+/* Not for tablets & phones */
+@media (min-width: 768px) {
+  .main-section {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
 }
 
 .main-section h2 {
@@ -21,11 +31,11 @@
 }
 
 .main-section strong {
-  color: rgb(29, 46, 56);
+  color: rgb(37, 85, 113);
 }
 
 .main-section a {
-  color: rgb(29, 46, 56);
+  color: rgb(37, 85, 113);
 }
 
 .main-title {
@@ -41,11 +51,33 @@ hr {
   color: white;
 }
 
+.competence {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: rgb(74, 104, 121);
+}
+
+.competence p {
+  margin-left: 40px;
+}
+
 .section {
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
+  color: rgb(74, 104, 121);
+}
+
+/* Not for tablets & phones */
+@media (min-width: 768px) {
+  .section {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
 }
 
 .section-title-margin {
@@ -58,13 +90,8 @@ hr {
   margin-bottom: 10px;
 }
 
-.section:nth-child(even) {
-  color: rgb(74, 104, 121);
-}
-
 .section:nth-child(odd) {
   background-color: rgb(229, 248, 255);
-  color: rgb(74, 104, 121);
 }
 
 .section h3 {

@@ -1,0 +1,6 @@
+<div class="container competence col-md-10 col-md-offset-1">
+  {{ range where .Data.Pages.Reverse "Section" "competence" }}
+     <h2><i class="fa {{ .Params.fontawesome_icon }}"></i>{{ .Params.title }}</h2>
+     <p>{{ .Params.description | markdownify }}
+  {{ end }}
+</div>
