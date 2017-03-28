@@ -2,6 +2,7 @@
 project = ""
 display_project = true
 company = ""
+website = ""
 logo = ""
 title = ""
 start_date = ""

@@ -1,19 +1,16 @@
 <div class="container col-md-10 col-md-offset-1 main-section">
   <div class="row">
-    <div class="col-md-12 col-sm-12">
-      <h2 class="text-uppercase">{{ .Site.Params.profile.first_name }}<strong>{{ .Site.Params.profile.last_name }}</strong></h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-8">
-      <div class="main-title">
+    <div class="col-xs-12 col-sm-8">
+      <div class="main-title animated fadeIn">
+        <h2 class="text-uppercase">{{ .Site.Params.profile.first_name }}<strong>{{ .Site.Params.profile.last_name }}</strong></h2>
+
         <h1 class="text-uppercase">{{ .Site.Params.profile.tagline }}</h1>
         <ul>
           {{ if (isset .Site.Params.profile "phone") | and (not (eq .Site.Params.profile.phone "")) }}
             <li><i class="fa fa-whatsapp" aria-hidden="true"></i>{{ .Site.Params.profile.phone }} </li>
           {{ end }}
           {{ if (isset .Site.Params.profile "email") | and (not (eq .Site.Params.profile.email "")) }}
-            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ .Site.Params.profile.email }}">{{ .Site.Params.profile.email }}</a> 
+            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ .Site.Params.profile.email }}">{{ .Site.Params.profile.email }}</a>
             </li>
           {{ end }}
           {{ if (isset .Site.Params.profile "nationality") | and (not (eq .Site.Params.profile.nationality "")) }}
@@ -25,7 +22,7 @@
         </ul>
       </div>
     </div>
-    <div class="col-sm-12 col-md-4 vertical-align">
+    <div class="col-xs-12 col-sm-4 text-right">
       <img class="img-responsive img-thumbnail" src="{{ .Site.Params.profile.picture }}" />
     </div>
   </div>
