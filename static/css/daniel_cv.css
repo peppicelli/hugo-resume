@@ -1,13 +1,17 @@
 .main-section {
   background: linear-gradient(to right, rgba(34,125,170,1) 0%, rgba(81, 205, 199,1) 100%);
-  padding-left:50px;
-  padding-right:50px;
   padding-bottom:25px;
 }
 
 @media (max-width: 768px) {
   .main-section {
     padding-top: 25px;
+    padding-left:30px;
+    padding-right: 30px;
+  }
+
+  .main-profile-picture {
+    text-align: center;
   }
 }
 /* Not for tablets & phones */
@@ -17,6 +21,12 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
     padding-top: 50px;
+    padding-left:50px;
+    padding-right:50px;
+  }
+
+  .main-profile-picture {
+    text-align: right;
   }
 }
 
