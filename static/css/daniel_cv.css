@@ -2,16 +2,21 @@
   background: linear-gradient(to right, rgba(34,125,170,1) 0%, rgba(81, 205, 199,1) 100%);
   padding-left:50px;
   padding-right:50px;
-  padding-top:50px;
   padding-bottom:25px;
 }
 
+@media (max-width: 768px) {
+  .main-section {
+    padding-top: 25px;
+  }
+}
 /* Not for tablets & phones */
 @media (min-width: 768px) {
   .main-section {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    padding-top: 50px;
   }
 }
 
@@ -36,6 +41,10 @@
 
 .main-section a {
   color: rgb(37, 85, 113);
+}
+
+.main-section .fa {
+  margin-right: 15px;
 }
 
 

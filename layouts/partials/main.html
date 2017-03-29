@@ -10,7 +10,7 @@
             <li><i class="fa fa-whatsapp" aria-hidden="true"></i>{{ .Site.Params.profile.phone }} </li>
           {{ end }}
           {{ if (isset .Site.Params.profile "email") | and (not (eq .Site.Params.profile.email "")) }}
-            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ .Site.Params.profile.email }}">{{ .Site.Params.profile.email }}</a>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ .Site.Params.profile.email }}"><strong>{{ .Site.Params.profile.email }}</strong></a>
             </li>
           {{ end }}
           {{ if (isset .Site.Params.profile "nationality") | and (not (eq .Site.Params.profile.nationality "")) }}
