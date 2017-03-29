@@ -19,6 +19,9 @@
           {{ if (isset .Site.Params.profile "birthday") | and (not (eq .Site.Params.profile.birthday "")) }}
             <li><i class="fa fa-birthday-cake" aria-hidden="true"></i>{{ .Site.Params.profile.birthday }}</li>
           {{ end }}
+          {{ if (isset .Site.Params.profile "address") | and (not (eq .Site.Params.profile.address "")) }}
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{ .Site.Params.profile.address }}</li>
+          {{ end }}
         </ul>
       </div>
     </div>

@@ -1,5 +1,8 @@
 <div class="container competence col-md-10 col-md-offset-1">
-  <h1 class="text-uppercase">Skills</h1>
+  <div class="title text-center wow fadeIn">
+    <img src="images/skills.svg"/>
+    <h1>Skills</h1>
+  </div>
   {{ range where .Data.Pages.Reverse "Section" "competence" }}
       <div class="wow fadeIn">
         <h2><i class="fa {{ .Params.fontawesome_icon }}"></i>{{ .Params.title }}</h2>

@@ -1,5 +1,8 @@
-<div class="section-title container col-md-10 col-md-offset-1">
-  <h1 class="text-uppercase">Experiences</h1>
+<div class="container col-md-10 col-md-offset-1">
+  <div class="title text-center wow fadeIn">
+    <img src="images/experiences.svg"/>
+    <h1>Experiences</h1>
+  </div>
 </div>
 {{ range where ((.Data.Pages.ByParam "start_date").Reverse) "Section" "experience" }}
   <div class="section container col-md-10 col-md-offset-1 wow fadeIn">
