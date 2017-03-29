@@ -26,9 +26,9 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 text-right">
-      <img class="img-responsive img-thumbnail" src="{{ .Site.Params.profile.picture }}" />
+      <img class="img-responsive img-thumbnail" alt="{{ .Site.Params.profile.first_name }} {{ .Site.Params.profile.last_name }}" src="{{ .Site.Params.profile.picture }}" />
     </div>
   </div>
-  <hr align="left">
+  <hr>
   <p>{{ with .Site.Params.profile.summary }}{{ . | markdownify }}{{ end }}</p>
 </div>

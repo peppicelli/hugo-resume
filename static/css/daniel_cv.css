@@ -20,6 +20,10 @@
   }
 }
 
+.main-section hr {
+  margin-left: 0px;
+}
+
 .main-section h2 {
   font-weight: 100;
   letter-spacing: 1px;

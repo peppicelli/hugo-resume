@@ -1,6 +1,6 @@
 <div class="container col-md-10 col-md-offset-1">
   <div class="title text-center wow fadeIn">
-    <img src="images/experiences.svg"/>
+    <img src="images/experiences.svg" alt="Experiences"/>
     <h1>Experiences</h1>
   </div>
 </div>
@@ -15,7 +15,7 @@
         {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
         <a href="{{ .Params.website }}" target="_blank">
         {{ end }}
-          <img class="section-logo img-responsive img-thumbnail" src="{{ .Params.logo }}"/>
+          <img class="section-logo img-responsive img-thumbnail" alt="{{ .Params.company  }}" src="{{ .Params.logo }}"/>
         {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
         </a>
         {{ end }}
