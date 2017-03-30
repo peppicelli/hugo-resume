@@ -7,7 +7,7 @@
         <h1 class="text-uppercase">{{ .Site.Params.profile.tagline }}</h1>
         <ul>
           {{ if (isset .Site.Params.profile "phone") | and (not (eq .Site.Params.profile.phone "")) }}
-            <li><i class="fa fa-whatsapp" aria-hidden="true"></i>{{ .Site.Params.profile.phone }} </li>
+            <li><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="tel:{{ .Site.Params.profile.phone }}"><strong>{{ .Site.Params.profile.phone }}</strong></a></li>
           {{ end }}
           {{ if (isset .Site.Params.profile "email") | and (not (eq .Site.Params.profile.email "")) }}
             <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ .Site.Params.profile.email }}"><strong>{{ .Site.Params.profile.email }}</strong></a>
