@@ -1,0 +1,12 @@
+<div class="container hobbies col-md-10 col-md-offset-1">
+  <div class="title text-center wow fadeIn">
+    <img src="images/hobies.svg" alt="Skills"/>
+    <h1>After work</h1>
+  </div>
+  {{ range where .Data.Pages.Reverse "Section" "hobby" }}
+      <div class="wow fadeIn">
+        <p><strong>{{ .Params.title }}</strong>. {{ .Params.description | markdownify }}
+      </div>
+  {{ end }}
+
+</div>

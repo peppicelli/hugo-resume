@@ -7,15 +7,25 @@
 {{ range where ((.Data.Pages.ByParam "start_date").Reverse) "Section" "experience" }}
   <div class="section container col-md-10 col-md-offset-1 wow fadeIn">
     <div class="row">
-      <div class="col-xs-12 col-sm-8 vertical-align">
+      <div class="col-xs-12 col-sm-8">
         <div class="small section-title-margin"> {{ .Params.start_date}} {{ if ( not (eq .Params.end_date "")) }} - {{ .Params.end_date}} {{ end }} </div>
-        <h3 class="section-title-margin"><span class="text-uppercase"><strong>{{ .Params.company  }}</strong></span></h3>
+        <h3 class="section-title-margin">
+          <span class="text-uppercase">
+            {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
+            <a class="no-decoration" href="{{ .Params.website }}" target="_blank">
+            {{ end }}
+            {{ .Params.company  }}
+            {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
+            </a>
+            {{ end }}
+          </span>
+        </h3>
       </div>
-      <div class="hidden-xs col-sm-4 text-right">
+      <div class="col-xs-12 col-sm-4 section-logo-container">
         {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
         <a href="{{ .Params.website }}" target="_blank">
         {{ end }}
-          <img class="section-logo img-responsive img-thumbnail" alt="{{ .Params.company  }}" src="{{ .Params.logo }}"/>
+          <img class="section-logo img-responsive" alt="{{ .Params.company  }}" src="{{ .Params.logo }}"/>
         {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
         </a>
         {{ end }}
@@ -28,7 +38,7 @@
     <p> {{ .Params.project | markdownify }} </p>
 
     {{ if (not (isset .Params "responsabilities")) | or (.Params.responsabilities) }}
-    <h2><i class="fa-left-icon fa fa-briefcase" aria-hidden="true"></i>Role: {{ .Params.title  }} </h2>
+    <h2><i class="fa-left-icon fa fa-briefcase" aria-hidden="true"></i>{{ .Params.title  }} </h2>
     <ul>
       {{ range .Params.responsabilities }}
          <li>{{ . | markdownify }}</li>
