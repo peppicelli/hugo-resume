@@ -1,11 +1,13 @@
+<div class="page-break-before"/>
 <div class="container col-md-10 col-md-offset-1">
   <div class="title text-center wow fadeIn">
-    <img src="{{ .Site.BaseURL }}images/experiences.svg" alt="Experiences"/>
+    <img class="no-print" src="{{ .Site.BaseURL }}images/experiences.svg" alt="Experiences"/>
     <h1>{{ i18n "experiences" }}</h1>
   </div>
 </div>
 {{ range where ((.Data.Pages.ByParam "start_date").Reverse) "Section" "experience" }}
-  <div class="section container col-md-10 col-md-offset-1 wow fadeIn">
+  <div class="section container col-md-10 col-md-offset-1 wow fadeIn page-break-avoid">
+    <hr class="no-screen"/>
     <div class="hidden-sm hidden-md hidden-lg">
       <div class="col-xs-12 section-logo-container">
         {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
@@ -32,7 +34,7 @@
           </span>
         </h3>
       </div>
-      <div class="hidden-xs">
+      <div class="hidden-xs no-print">
         <div class="col-sm-4 section-logo-container">
           {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
           <a href="{{ .Params.website }}" target="_blank">
@@ -68,5 +70,4 @@
     </ul>
     {{ end }}
   </div>
-
 {{ end }}

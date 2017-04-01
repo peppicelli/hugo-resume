@@ -1,0 +1,62 @@
+@media print {
+
+  body {
+    padding-top: .5cm;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+
+  .title {
+    margin-top: .5cm;
+  }
+
+  /* fix issues with wow.js */
+	.wow {
+    animation-name:none!important;
+	  visibility:visible!important;
+  }
+
+  .page-break-avoid {
+    page-break-inside: avoid;
+  }
+
+  .main-profile-picture {
+    float: right;
+    position: absolute;
+    top: 1cm;
+    right: 2.5cm;
+    width: 4cm;
+    height: 4cm;
+  }
+
+  .section-logo {
+    float: right;
+  }
+
+  .main-title .fa {
+      margin-right: 7px;
+  }
+
+  .fa {
+    margin-right: 15px;
+  }
+
+}

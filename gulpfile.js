@@ -15,7 +15,9 @@ gulp.task('copy-assets', function() {
         css: [
             './node_modules/bootstrap/dist/css/bootstrap.min.css',
             './node_modules/font-awesome/css/font-awesome.min.css',
-            './node_modules/animate.css/animate.min.css'
+            './node_modules/animate.css/animate.min.css',
+            './node_modules/gutenberg-css/dist/gutenberg.min.css',
+            './node_modules/gutenberg-css/dist/themes/modern.min.css'
         ],
         fonts: ['./node_modules/font-awesome/fonts/*']
     };

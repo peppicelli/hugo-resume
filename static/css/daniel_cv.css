@@ -3,6 +3,10 @@
   padding-bottom:25px;
 }
 
+@media screen {
+    .no-screen { display: none; }
+}
+
 @media (max-width: 768px) {
   .main-section {
     padding-top: 25px;

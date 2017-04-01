@@ -8,12 +8,14 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{ .Site.Params.profile.first_name }} {{ .Site.Params.profile.last_name }} - {{ .Site.Params.profile.tagline }}</title>
 
-    <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="{{ .Site.BaseURL }}css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="{{ .Site.BaseURL }}css/animate.min.css" rel="stylesheet" media="all">
-    <link href="{{ .Site.BaseURL }}css/daniel_cv.css" rel="stylesheet" media="all">
+    <link href="{{ .Site.BaseURL }}css/animate.min.css" rel="stylesheet" media="screen">
+    <link href="{{ .Site.BaseURL }}css/gutenberg.min.css" rel="stylesheet" media="print">
+    <link href="{{ .Site.BaseURL }}css/daniel_cv-print.css" rel="stylesheet" media="print">
+    <link href="{{ .Site.BaseURL }}css/daniel_cv.css" rel="stylesheet" media="screen">
 
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon.ico">
 
     {{`<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
