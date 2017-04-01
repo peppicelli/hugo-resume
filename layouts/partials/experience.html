@@ -1,11 +1,22 @@
 <div class="container col-md-10 col-md-offset-1">
   <div class="title text-center wow fadeIn">
-    <img src="images/experiences.svg" alt="Experiences"/>
-    <h1>Experiences</h1>
+    <img src="{{ .Site.BaseURL }}images/experiences.svg" alt="Experiences"/>
+    <h1>{{ i18n "experiences" }}</h1>
   </div>
 </div>
 {{ range where ((.Data.Pages.ByParam "start_date").Reverse) "Section" "experience" }}
   <div class="section container col-md-10 col-md-offset-1 wow fadeIn">
+    <div class="hidden-sm hidden-md hidden-lg">
+      <div class="col-xs-12 section-logo-container">
+        {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
+        <a href="{{ .Params.website }}" target="_blank">
+        {{ end }}
+          <img class="section-logo img-responsive" alt="{{ .Params.company  }}" src="{{ .Site.BaseURL }}{{ .Params.logo }}"/>
+        {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
     <div class="row">
       <div class="col-xs-12 col-sm-8">
         <div class="small section-title-margin"> {{ .Params.start_date}} {{ if ( not (eq .Params.end_date "")) }} - {{ .Params.end_date}} {{ end }} </div>
@@ -21,19 +32,21 @@
           </span>
         </h3>
       </div>
-      <div class="col-xs-12 col-sm-4 section-logo-container">
-        {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
-        <a href="{{ .Params.website }}" target="_blank">
-        {{ end }}
-          <img class="section-logo img-responsive" alt="{{ .Params.company  }}" src="{{ .Params.logo }}"/>
-        {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
-        </a>
-        {{ end }}
+      <div class="hidden-xs">
+        <div class="col-sm-4 section-logo-container">
+          {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
+          <a href="{{ .Params.website }}" target="_blank">
+          {{ end }}
+            <img class="section-logo img-responsive" alt="{{ .Params.company  }}" src="{{ .Site.BaseURL }}{{ .Params.logo }}"/>
+          {{ if (isset .Params "website") | and ( not ( eq .Params.website "")) }}
+          </a>
+          {{ end }}
+        </div>
       </div>
     </div>
 
     {{ if eq .Params.display_project true }}
-    <h2><i class="fa-left-icon fa fa-desktop" aria-hidden="true"></i>Project</h2>
+    <h2><i class="fa-left-icon fa fa-desktop" aria-hidden="true"></i>{{ i18n "project" }}</h2>
     {{ end }}
     <p> {{ .Params.project | markdownify }} </p>
 
@@ -47,7 +60,7 @@
     {{ end }}
 
     {{ if (not (isset .Params "main_achievements")) | or (.Params.main_achievements) }}
-    <h2><i class="fa-left-icon fa fa-trophy" aria-hidden="true"></i>Interesting challenges</h2>
+    <h2><i class="fa-left-icon fa fa-trophy" aria-hidden="true"></i>{{ i18n "challenges" }}</h2>
     <ul>
       {{ range .Params.main_achievements }}
          <li>{{ . | markdownify }}</li>

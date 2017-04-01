@@ -62,6 +62,9 @@
   margin-right: 15px;
 }
 
+.main-title h2 {
+  margin-top: 0px;
+}
 
 .main-title ul {
   list-style: none;
@@ -124,8 +127,9 @@ hr {
 
 @media (max-width: 768px) {
   .section-logo-container {
-    text-align: left;
-    margin-left: 25px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
   }
 }
 

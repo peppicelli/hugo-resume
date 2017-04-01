@@ -1,0 +1,12 @@
+- id: skills
+  translation: "Compétences"
+- id: experiences
+  translation: "Expériences professionnelles"
+- id: project
+  translation: "Projet"
+- id: challenges
+  translation: "Challenges"
+- id: hobbies
+  translation: "Quoi d'autre?"
+- id: hobbies_intro
+  translation: "D’habitude, j’essaie de ne pas travailler la nuit ou le weekend (mis à part pour les mise en production ou les deadlines). A la place j’aime bien:"

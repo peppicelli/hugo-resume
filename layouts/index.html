@@ -8,10 +8,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{ .Site.Params.profile.first_name }} {{ .Site.Params.profile.last_name }} - {{ .Site.Params.profile.tagline }}</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="all">
-    <link href="css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="css/animate.min.css" rel="stylesheet" media="all">
-    <link href="css/daniel_cv.css" rel="stylesheet" media="all">
+    <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="{{ .Site.BaseURL }}css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="{{ .Site.BaseURL }}css/animate.min.css" rel="stylesheet" media="all">
+    <link href="{{ .Site.BaseURL }}css/daniel_cv.css" rel="stylesheet" media="all">
 
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
@@ -31,10 +31,10 @@
 
     {{ template "_internal/google_analytics.html" . }}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
+    <script src="{{ .Site.BaseURL }}js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="{{ .Site.BaseURL }}js/bootstrap.min.js"></script>
+    <script src="{{ .Site.BaseURL }}js/wow.min.js"></script>
     <script>new WOW().init();</script>
   </body>
 </html>

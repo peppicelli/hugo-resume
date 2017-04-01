@@ -1,7 +1,7 @@
 <div class="container competence col-md-10 col-md-offset-1">
   <div class="title text-center wow fadeIn">
-    <img src="images/skills.svg" alt="Skills"/>
-    <h1>Skills</h1>
+    <img src="{{ .Site.BaseURL }}images/skills.svg" alt="Skills"/>
+    <h1>{{ i18n "skills" }}</h1>
   </div>
   {{ range where .Data.Pages.Reverse "Section" "competence" }}
       <div class="wow fadeIn">

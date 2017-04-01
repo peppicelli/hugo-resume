@@ -1,4 +1,23 @@
 <div class="container col-md-10 col-md-offset-1 main-section">
+  {{ if .IsTranslated }}
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+      {{ $baseURL := .Site.BaseURL }}
+      {{ $current := .Site.Language }}
+      {{ range .Site.Languages }}
+        <span>
+          <a href="{{$baseURL}}{{ . }}">
+            {{ if eq $current . }}
+              <strong>{{ . }}</strong>
+            {{ else }}
+              {{ . }}
+            {{ end }}
+          </a>
+        </span>
+      {{ end}}
+    </div>
+  </div>
+  {{ end }}
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-8">
       <div class="main-title animated fadeIn">
@@ -19,6 +38,9 @@
           {{ if (isset .Site.Params.profile "birthday") | and (not (eq .Site.Params.profile.birthday "")) }}
             <li><i class="fa fa-birthday-cake" aria-hidden="true"></i>{{ .Site.Params.profile.birthday }}</li>
           {{ end }}
+          {{ if (isset .Site.Params.profile "availability") | and (not (eq .Site.Params.profile.availability "")) }}
+            <li><i class="fa  fa-calendar-check-o" aria-hidden="true"></i>{{ .Site.Params.profile.availability }}</li>
+          {{ end }}
           {{ if (isset .Site.Params.profile "address") | and (not (eq .Site.Params.profile.address "")) }}
             <li><i class="fa fa-map-marker" aria-hidden="true"></i>{{ .Site.Params.profile.address }}</li>
           {{ end }}
@@ -26,7 +48,7 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 main-profile-picture">
-      <img class="img-responsive img-thumbnail" alt="{{ .Site.Params.profile.first_name }} {{ .Site.Params.profile.last_name }}" src="{{ .Site.Params.profile.picture }}" />
+      <img class="img-responsive img-thumbnail" alt="{{ .Site.Params.profile.first_name }} {{ .Site.Params.profile.last_name }}" src="{{ .Site.BaseURL }}{{ .Site.Params.profile.picture }}" />
     </div>
   </div>
   <hr>
