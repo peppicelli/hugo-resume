@@ -1,4 +1,4 @@
-<div class="page-break-before"/>
+<div class="page-break-before"></div>
 <div class="container col-md-10 col-md-offset-1">
   <div class="title text-center wow fadeIn">
     <img class="no-print" src="{{ .Site.BaseURL }}images/experiences.svg" alt="Experiences"/>
@@ -6,7 +6,7 @@
   </div>
 </div>
 {{ range where ((.Data.Pages.ByParam "start_date").Reverse) "Section" "experience" }}
-  <div class="section container col-md-10 col-md-offset-1 wow fadeIn page-break-avoid">
+  <div class="section container col-md-10 col-md-offset-1 wow fadeIn page-break-avoid" id="{{ .Params.anchor }}">
     <hr class="no-screen"/>
     <div class="hidden-sm hidden-md hidden-lg">
       <div class="col-xs-12 section-logo-container">
