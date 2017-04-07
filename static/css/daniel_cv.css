@@ -148,7 +148,7 @@ hr {
   height: auto;
 }
 
-.section:nth-child(odd) {
+.section:nth-child(even) {
   background: linear-gradient(to right, rgba(34,125,170,0.3) 0%, rgba(81, 205, 199, 0.3) 100%);
 }
 
