@@ -10,4 +10,8 @@ end_date = ""
 anchor = ""
 responsabilities = []
 main_achievements = []
+images = []
+captions = []
+work_certificate_excerpt = ""
+work_certificate = ""
 +++

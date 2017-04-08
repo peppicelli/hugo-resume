@@ -10,3 +10,11 @@
   translation: "Et a part ça?"
 - id: hobbies_intro
   translation: "D’habitude, j’essaie de ne pas travailler la nuit ou le week-end (mis à part pour les mises en production ou les deadlines à tenir). A la place j’aime bien:"
+- id: images
+  translation: En images
+- id: work_certificate
+  translation: Certificat de travail
+- id: view_certificate
+  translation: Certificat de travail complet
+- id: print_message
+  translation: Pour une meilleure lisibilité

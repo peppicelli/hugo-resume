@@ -148,7 +148,7 @@ hr {
   height: auto;
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
   background: linear-gradient(to right, rgba(34,125,170,0.3) 0%, rgba(81, 205, 199, 0.3) 100%);
 }
 
@@ -210,4 +210,31 @@ h3 {
 
 .pink {
   color: #F660AB;
+}
+
+.quote {
+  padding-left: 15px;
+}
+
+.carousel {
+  margin-left: 35px;
+  margin-right: 15px;
+}
+
+.carousel p {
+  margin-left: 0px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-caption {
+  background-color: rgba(80,80,80,0.8);
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  border: 2px solid rgba(30,30,30,0.8);;
 }

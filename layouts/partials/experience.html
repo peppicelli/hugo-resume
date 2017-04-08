@@ -69,5 +69,47 @@
       {{ end }}
     </ul>
     {{ end }}
+
+    {{ if (isset .Params "work_certificate_excerpt") | and ( not ( eq .Params.work_certificate_excerpt "")) }}
+    <div class="no-print">
+      <h2><i class="fa-left-icon fa fa-file-text-o" aria-hidden="true"></i>{{ i18n "work_certificate" }}</h2>
+      <p class="quote"><i>“{{.Params.work_certificate_excerpt}}”</i></p>
+      <p class="quote"><a href="{{.Site.BaseURL}}{{.Params.work_certificate}}" target="_blank"><strong>{{ i18n "view_certificate" }} <i class="fa fa-external-link" aria-hidden="true"></i></strong></a></p>
+    </div>
+    {{ end }}
+
+    {{ if (isset .Params "images") }}
+    {{ $base := .Site.BaseURL }}
+    {{ $captions := .Params.captions }}
+    <h2 class="no-print"><i class="fa-left-icon fa fa-picture-o" aria-hidden="true"></i>{{ i18n "images" }}</h2>
+    <div class="carousel slide no-print" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {{ range $index, $element := .Params.images }}
+          {{ if eq $index 0 }}
+            <li data-target="#myCarousel" data-slide-to="{{ $index }}" class="active"></li>
+          {{ else }}
+            <li data-target="#myCarousel" data-slide-to="{{ $index }}" class=""></li>
+          {{ end }}
+        {{ end }}
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+      {{ range $index, $element := .Params.images }}
+      {{ if eq $index 0 }}
+        <div class="item active text-center">
+      {{ else }}
+        <div class="item text-center">
+      {{ end }}
+        <img class="thumbnail img-responsive" src="{{ $base }}{{ $element }}" alt="illustration {{ $index }}">
+          <div class="carousel-caption hidden-xs">
+            <p> {{( index $captions $index )}}
+          </div>
+        </div>
+      {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
   </div>
+
 {{ end }}

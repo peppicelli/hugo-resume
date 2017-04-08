@@ -10,3 +10,11 @@
   translation: "What else?"
 - id: hobbies_intro
   translation: "Usually I try not to work at night or during the weekend (unless there is a go-live or an important release of course). Otherwise, I do enjoy:"
+- id: images
+  translation: In images
+- id: work_certificate
+  translation: Work certificate
+- id: view_certificate
+  translation: View full work certificate
+- id: print_message
+  translation: Best viewed directly in your browser
