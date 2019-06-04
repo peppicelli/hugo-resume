@@ -61,7 +61,7 @@
     </ul>
     {{ end }}
 
-    {{ if (not (isset .Params "main_achievements")) | or (.Params.main_achievements) }}
+    {{ if (isset .Params "main_achievements") }}
     <h2><i class="fa-left-icon fa fa-trophy" aria-hidden="true"></i>{{ i18n "challenges" }}</h2>
     <ul>
       {{ range .Params.main_achievements }}
